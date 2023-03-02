@@ -28,10 +28,7 @@ if (playerInput == "1") {
   playerMove = "nożyce";
 }
 
-console.log("Twój ruch to: " + playerMove);
-
-console.log(computerMove);
-console.log(playerMove);
+console.log("Ruch gracza to: " + playerMove);
 
 if (computerMove == "kamień" && playerMove == "papier") {
   alert("Ty wygrywasz!");
@@ -42,7 +39,7 @@ if (computerMove == "kamień" && playerMove == "papier") {
 } else if (computerMove == playerMove) {
   alert("Remis!");
 } else if (playerMove == "nieznany ruch") {
-  alert("Wpisałeś liczbę inną niż 1, 2 lub - spróbuj ponownie.");
+  alert("Wpisałeś liczbę inną niż 1, 2 lub 3 - spróbuj ponownie.");
 } else {
   alert("Komputer wygrywa!");
 }
