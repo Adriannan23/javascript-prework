@@ -1,9 +1,9 @@
 let randomNumber = Math.floor(Math.random() * 3 + 1);
-
-console.log("Wylosowana liczba to: " + randomNumber);
-
-let computerMove = "nieznany ruch";
-
+​
+console.log('Wylosowana liczba to: ' + randomNumber);
+​
+let computerMove = 'nieznany ruch';
+​
 if (randomNumber == 1) {
   computerMove = "kamień";
 } else if (randomNumber == 2) {
@@ -11,14 +11,15 @@ if (randomNumber == 1) {
 } else if (randomNumber == 3) {
   computerMove = "nożyce";
 }
+​
+printMessage('Mój ruch to: ' + computerMove);
+​
 
-console.log("Ruch komputera to: " + computerMove);
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
-let playerInput = prompt("Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.");
+console.log('Gracz wpisał: ' + playerInput);
 
-console.log("Gracz wpisał: " + playerInput);
-
-let playerMove = "nieznany ruch";
+let playerMove = 'nieznany ruch';
 
 if (playerInput == "1") {
   playerMove = "kamień";
@@ -28,18 +29,19 @@ if (playerInput == "1") {
   playerMove = "nożyce";
 }
 
-console.log("Ruch gracza to: " + playerMove);
+printMessage('Twój ruch to: ' + playerMove);
+
 
 if (computerMove == "kamień" && playerMove == "papier") {
-  alert("Ty wygrywasz!");
+  printMessage("Ty wygrywasz!");
 } else if (computerMove == "papier" && playerMove == "nożyce") {
-  alert("Ty wygrywasz!");
+  printMessage("Ty wygrywasz!");
 } else if (computerMove == "nożyce" && playerMove == "kamień") {
-  alert("Ty wygrywasz!");
+  printMessage("Ty wygrywasz!");
 } else if (computerMove == playerMove) {
-  alert("Remis!");
+  printMessage("Remis!");
 } else if (playerMove == "nieznany ruch") {
-  alert("Wpisałeś liczbę inną niż 1, 2 lub 3 - spróbuj ponownie.");
+  printMessage("Wpisałeś liczbę inną niż 1, 2 lub 3 - spróbuj ponownie.");
 } else {
-  alert("Komputer wygrywa!");
+  printMessage("Komputer wygrywa!");
 }
