@@ -29,19 +29,19 @@ function playGame(playerInput) {
     }
   }
 
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
-  let computerMove = getMoveName(randomNumber);
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
+  const computerMove = getMoveName(randomNumber);
   console.log("Wylosowana liczba to: " + randomNumber);
   printMessage("Mój ruch to: " + computerMove);
-  let arggComputerMove = computerMove;
+  const arggComputerMove = computerMove;
 
   // let playerInput = prompt(
   //   "Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce."
   // );
-  let playerMove = getMoveName(playerInput);
+  const playerMove = getMoveName(playerInput);
   console.log("Gracz wpisał: " + playerInput);
   printMessage("Twój ruch to: " + playerMove);
-  let arggPlayerMove = playerMove;
+  const arggPlayerMove = playerMove;
 
   displayResult(arggComputerMove, arggPlayerMove);
 }
