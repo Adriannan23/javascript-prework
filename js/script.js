@@ -1,4 +1,4 @@
-const playGame = function (playerInput) {
+{const playGame = function (playerInput) {
   clearMessages();
 
   const getMoveName = function (argMoveId) {
@@ -54,4 +54,4 @@ document.getElementById("play-paper").addEventListener("click", function () {
 });
 document.getElementById("play-scissors").addEventListener("click", function () {
   playGame(3);
-});
+});}
